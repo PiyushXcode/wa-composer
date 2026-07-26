@@ -5,8 +5,11 @@ import {
   HiSparkles,
   HiCheckBadge,
   HiChatBubbleLeftRight,
+  HiCheck,
+  HiMiniCheck,
+  HiDocumentCheck,
 } from "react-icons/hi2";
-import { HiArrowDown } from "react-icons/hi";
+import { HiArrowDown, HiCheckCircle } from "react-icons/hi";
 
 export default function ComposerHero() {
   return (
@@ -63,7 +66,7 @@ export default function ComposerHero() {
         />
 
         <Feature
-          icon={<HiSparkles />}
+          icon={<HiDocumentCheck />}
           title="Read Receipts"
         />
       </motion.div>
