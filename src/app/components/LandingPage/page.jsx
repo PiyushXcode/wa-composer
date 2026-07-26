@@ -17,7 +17,7 @@ const Page = () => {
       <main className="flex flex-1 overflow-hidden">
 
         {/* Left Navigation */}
-        <aside className="w-16 shrink-0 border-r bg-white">
+        <aside className="md:w-16 shrink-0 border-r bg-white">
           <LeftIcon />
         </aside>
 

@@ -9,9 +9,30 @@ const ComposeButton = () => {
   return (
     <Link href="/form">
       <button
-        className="fixed bottom-20 left-70 md:bottom-8 md:right-8 lg:left-110 z-50 h-16 w-16 rounded-full bg-[#25D366] shadow-xl flex items-center justify-center text-whitehover:bg-[#20bd5a] hover:scale-105 active:scale-95 transition-all duration-200">
-        <HiOutlinePencilSquare size={30} />
-      </button>
+  className="
+    fixed
+    bottom-28
+    right-5
+    md:hidden
+
+    w-14
+    h-14
+
+    rounded-full
+    bg-[#25D366]
+
+    flex
+    items-center
+    justify-center
+
+    shadow-xl
+    hover:scale-105
+    active:scale-95
+    transition
+  "
+>
+  ✏️
+</button>
     </Link>
   );
 };
