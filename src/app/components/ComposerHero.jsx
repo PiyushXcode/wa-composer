@@ -10,7 +10,7 @@ import { HiArrowDown } from "react-icons/hi";
 
 export default function ComposerHero() {
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden mt-2">
 
       {/* Background Blur */}
 
@@ -30,7 +30,7 @@ export default function ComposerHero() {
 
       <motion.h1 initial={{ opacity: 0, y: 35 }} animate={{ opacity: 1, y: 0 }}
         transition={{ delay: .2 }}
-        className="text-center font-black  leading-none  text-6xl  md:text-8xl  xl:text-[110px]  "> WhatsApp <br />
+        className="text-center text-white font-black  leading-none  text-6xl  md:text-8xl  xl:text-[110px] z-90  "> WhatsApp <br />
 
         <span className="text-[#25D366]">
           Message Composer
