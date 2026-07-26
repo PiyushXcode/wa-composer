@@ -35,11 +35,9 @@ export default function ComposerHero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.45 }}
-        className="z-10 mt-8 max-w-3xl text-center text-lg md:text-xl leading-9 text-gray-600"
+        className="z-10 mt-8 max-w-4xl text-center text-lg md:text-xl leading-9 text-gray-600"
       >
-        Create beautiful WhatsApp conversations with
-        real-time previews, animated delivery ticks,
-        read receipts and smooth Framer Motion animations.
+       Experience a beautifully crafted WhatsApp Message Composer that lets you create, preview, and simulate conversations in real time. Enjoy an authentic chat interface with realistic message bubbles, delivery indicators, and a polished user experience inspired by the official WhatsApp design.
       </motion.p>
 
       {/* Features */}
