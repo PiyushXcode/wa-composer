@@ -95,7 +95,7 @@ export default function ComposerHero() {
           transition-all
         "
       >
-        Start Composing →
+        Start Composing 
       </motion.button>
 
       {/* Scroll Down */}
