@@ -23,22 +23,40 @@ export default function FormPage() {
   const [status, setStatus] = useState("none");
   console.log("Preview State:", preview);
 
-  return (
-    <div className="min-h-screen bg-[#ece5dd] text-black px-5 py-8">
+ return (
+  <div className="min-h-screen bg-[#ece5dd]">
 
-      <div className="max-w-7xl mx-auto">
+    {/* Hero Section */}
+    <section className="min-h-screen flex items-center justify-center px-6">
+      <div className="w-full max-w-7xl">
         <ComposerHero />
+      </div>
+    </section>
+
+    {/* Composer Section */}
+    <section
+      id="composer"
+      className="min-h-screen flex items-center justify-center px-6 py-20"
+    >
+      <div className="w-full max-w-7xl">
+
         {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-black">
+            Compose Your
+            <span className="text-[#25D366]"> Message</span>
+          </h2>
 
-        <h1 className="text-4xl font-bold mb-8 mt-8">
-          Compose Message
-        </h1>
+          <p className="mt-4 text-gray-600 text-lg">
+            Fill in the details and watch the live WhatsApp preview update
+            instantly.
+          </p>
+        </div>
 
-        {/* Two Columns */}
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        {/* Form + Preview */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left Side */}
-
+          {/* Left */}
           <ComposeForm
             formData={formData}
             setFormData={setFormData}
@@ -48,18 +66,20 @@ export default function FormPage() {
             setStatus={setStatus}
           />
 
-          {/* Right Side */}
-
-          <PhonePreview
-            preview={preview}
-            status={status}
-            setStatus={setStatus}
-          />
+          {/* Right */}
+          <div className="flex justify-center">
+            <PhonePreview
+              preview={preview}
+              status={status}
+              setStatus={setStatus}
+            />
+          </div>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
-  );
+  </div>
+);
 }

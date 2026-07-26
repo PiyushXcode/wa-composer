@@ -18,11 +18,7 @@ export default function ComposerHero() {
 
       {/* Badge */}
 
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: .7 }}
-        className="mb-8"
+      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }} className="mb-8"
       >
         <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-5 py-2 rounded-full font-medium">
           <HiSparkles />
@@ -32,21 +28,9 @@ export default function ComposerHero() {
 
       {/* Heading */}
 
-      <motion.h1
-        initial={{ opacity: 0, y: 35 }}
-        animate={{ opacity: 1, y: 0 }}
+      <motion.h1 initial={{ opacity: 0, y: 35 }} animate={{ opacity: 1, y: 0 }}
         transition={{ delay: .2 }}
-        className="
-        text-center
-        font-black
-        leading-none
-        text-6xl
-        md:text-8xl
-        xl:text-[110px]
-        "
-      >
-        WhatsApp
-        <br />
+        className="text-center font-black  leading-none  text-6xl  md:text-8xl  xl:text-[110px]  "> WhatsApp <br />
 
         <span className="text-[#25D366]">
           Message Composer

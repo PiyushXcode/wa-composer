@@ -104,7 +104,7 @@ const ComposeForm = ({
       initial="hidden"
       animate="visible"
       onSubmit={handleSubmit}
-      className="bg-white rounded-3xl shadow-2xl p-8 space-y-6"
+      className="bg-white rounded-3xl shadow-2xl p-8 space-y-6 text-black"
     >
       <motion.h2
         variants={item}
