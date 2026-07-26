@@ -3,7 +3,7 @@ import MainHeader from "@/app/components/LandingPage/MainHeader/page";
 import LeftIcon from "@/app/components/LandingPage/LeftIcons/page";
 import Chat from "@/app/components/Chats/page";
 import MainChats from "@/app/components/Chats/MainChats/page";
-
+import ComposeMessage from "@/app/components/ComposeMessage/page.jsx"
 const Page = () => {
   return (
     <div className="h-screen w-full bg-gray-100 flex flex-col overflow-hidden">
@@ -22,10 +22,11 @@ const Page = () => {
         </aside>
 
         {/* Chat List */}
-        <section className="w-full md:w-[360px] lg:w-[420px] xl:w-[460px] border-r border-gray-300 bg-white overflow-y-auto shrink-0">
+        <section
+          className="relative w-full md:w-[360px] lg:w-[420px] xl:w-[460px] border-r border-gray-300 bg-white overflow-y-auto shrink-0" >
           <Chat />
+          <ComposeMessage/>
         </section>
-
         {/* Chat Window */}
         <section className="flex-1 overflow-hidden">
           <MainChats />
