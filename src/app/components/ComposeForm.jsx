@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import ComposerHero from "./ComposerHero";
 const container = {
   hidden: {
     opacity: 0,

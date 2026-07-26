@@ -6,216 +6,241 @@ import {
   HiCheckBadge,
   HiChatBubbleLeftRight,
 } from "react-icons/hi2";
+import { HiArrowDown } from "react-icons/hi";
 
 export default function ComposerHero() {
   return (
-    <motion.section
-      initial={{ opacity: 0, x: -70 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8 }}
-      className="w-full h-full flex flex-col justify-center"
-    >
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
+
+      {/* Background Blur */}
+
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-green-300/20 blur-[180px]" />
+
       {/* Badge */}
 
       <motion.div
-        initial={{ opacity: 0, scale: .8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: .2 }}
-        className="
-          inline-flex
-          items-center
-          gap-2
-          bg-green-100
-          text-green-700
-          px-5
-          py-2
-          rounded-full
-          w-fit
-          font-medium
-          shadow-sm
-        "
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: .7 }}
+        className="mb-8"
       >
-        <HiSparkles className="text-lg" />
-        WhatsApp UI Simulation
+        <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-5 py-2 rounded-full font-medium">
+          <HiSparkles />
+          WhatsApp UI Simulation
+        </div>
       </motion.div>
 
-      {/* Hero Content */}
+      {/* Heading */}
 
-      <div className="mt-10 grid lg:grid-cols-2 gap-14 items-start">
+      <motion.h1
+        initial={{ opacity: 0, y: 35 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: .2 }}
+        className="
+        text-center
+        font-black
+        leading-none
+        text-6xl
+        md:text-8xl
+        xl:text-[110px]
+        "
+      >
+        WhatsApp
+        <br />
 
-        {/* LEFT */}
+        <span className="text-[#25D366]">
+          Message Composer
+        </span>
+      </motion.h1>
 
-        <div>
+      {/* Description */}
 
-          <motion.h1
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .35 }}
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: .5 }}
+        className="
+        mt-8
+        max-w-3xl
+        text-center
+        text-lg
+        md:text-xl
+        text-gray-600
+        leading-9
+        "
+      >
+        Create beautiful WhatsApp conversations with live message
+        previews, delivery ticks, read receipts and premium
+        animations powered by Framer Motion.
+      </motion.p>
+
+      {/* Features */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: .8 }}
+        className="
+        mt-16
+        grid
+        md:grid-cols-2
+        gap-x-24
+        gap-y-8
+        "
+      >
+        <Feature
+          icon={<HiChatBubbleLeftRight />}
+          title="Real-time Preview"
+        />
+
+        <Feature
+          icon={<HiCheckBadge />}
+          title="Delivery Status"
+        />
+
+        <Feature
+          icon={<HiSparkles />}
+          title="Modern UI"
+        />
+
+        <Feature
+          icon={<HiSparkles />}
+          title="Read Receipts"
+        />
+      </motion.div>
+      {/* Compose Button */}
+
+      <motion.button
+        whileHover={{
+          scale: 1.06,
+          y: -3,
+        }}
+        whileTap={{
+          scale: 0.96,
+        }}
+        className="
+    mt-16
+    bg-[#25D366]
+    text-white
+    text-lg
+    font-semibold
+    px-10
+    py-5
+    rounded-2xl
+    shadow-2xl
+    hover:bg-[#1ebe5d]
+    transition-all
+    duration-300
+  "
+      >
+        Start Composing →
+      </motion.button>
+
+      {/* Scroll Down */}
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          y: [0, 10, 0],
+        }}
+        transition={{
+          opacity: {
+            delay: 1.2,
+            duration: 0.6,
+          },
+          y: {
+            repeat: Infinity,
+            duration: 1.5,
+            ease: "easeInOut",
+          },
+        }}
+        className="mt-14 flex flex-col items-center"
+      >
+
+        <div
+          className="
+      flex
+      flex-col
+      items-center
+      gap-3
+
+      px-8
+      py-5
+
+      rounded-full
+      backdrop-blur-xl
+    "
+        >
+          <span
             className="
-              text-5xl
-              xl:text-6xl
-              font-black
-              leading-tight
-              text-gray-900
-            "
+        text-base
+        font-semibold
+        tracking-wide
+        uppercase
+        text-gray-700
+      "
           >
-            WhatsApp
+            Scroll Down
+          </span>
 
-            <br />
-
-            <span className="text-[#25D366]">
-              Message Composer
-            </span>
-
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .5 }}
-            className="
-              mt-8
-              text-lg
-              leading-8
-              text-gray-600
-              max-w-xl
-            "
-          >
-            Create realistic WhatsApp conversations with
-            live previews, animated delivery ticks,
-            read receipts and beautiful message
-            simulations.
-
-            <br />
-            <br />
-          </motion.p>
-
-          <motion.button
-            whileHover={{
-              scale: 1.04,
-              y: -3,
+          <motion.div
+            animate={{
+              y: [0, 8, 0],
             }}
-            whileTap={{
-              scale: .96,
+            transition={{
+              repeat: Infinity,
+              duration: 1.3,
             }}
-            className="
-              mt-10
-              bg-[#25D366]
-              text-white
-              px-8
-              py-4
-              rounded-xl
-              shadow-xl
-              font-semibold
-            "
           >
-            Start Composing →
-          </motion.button>
-
+            <HiArrowDown
+              size={34}
+              className="text-[#25D366]"
+            />
+          </motion.div>
         </div>
 
-        {/* RIGHT */}
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: .7 }}
-          className="
-            bg-white
-            rounded-3xl
-            shadow-xl
-            border
-            border-gray-100
-            p-8
-          "
-        >
 
-          <h3 className="text-2xl font-bold mb-8">
-            Features
-          </h3>
 
-          <div className="space-y-6">
-
-            <Feature
-              icon={<HiChatBubbleLeftRight />}
-              title="Real-time Preview"
-              desc="Watch messages appear instantly on the phone."
-            />
-
-            <Feature
-              icon={<HiCheckBadge />}
-              title="Delivery Status"
-              desc="Animated Sent, Delivered and Read ticks."
-            />
-
-            <Feature
-              icon={<HiSparkles />}
-              title="Modern UI"
-              desc="Pixel-perfect WhatsApp inspired interface."
-            />
-
-          </div>
-
-        </motion.div>
-
-      </div>
-    </motion.section>
+    </section>
   );
 }
 
-function Feature({ icon, title, desc }) {
+function Feature({ icon, title }) {
   return (
     <motion.div
       whileHover={{
-        x: 8,
-        scale: 1.02,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 250,
+        y: -6,
+        scale: 1.05,
       }}
       className="
-        flex
-        items-start
-        gap-4
-        p-4
-        rounded-2xl
-        hover:bg-green-50
-        transition
-        cursor-pointer
+      flex
+      items-center
+      gap-4
       "
     >
-
       <div
         className="
-          w-14
-          h-14
-          rounded-2xl
-          bg-[#25D366]
-          flex
-          items-center
-          justify-center
-          text-white
-          text-2xl
-          shadow-lg
-          shrink-0
+        w-14
+        h-14
+        rounded-2xl
+        bg-[#25D366]
+        text-white
+        flex
+        items-center
+        justify-center
+        text-2xl
+        shadow-lg
         "
       >
         {icon}
       </div>
 
-      <div>
-
-        <h4 className="font-semibold text-lg text-gray-800">
-          {title}
-        </h4>
-
-        <p className="text-gray-500 mt-1 leading-6">
-          {desc}
-        </p>
-
-      </div>
-
+      <span className="text-xl font-semibold text-gray-800">
+        {title}
+      </span>
     </motion.div>
   );
 }
