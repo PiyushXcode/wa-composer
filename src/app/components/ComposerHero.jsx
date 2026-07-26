@@ -88,11 +88,6 @@ export default function ComposerHero() {
 
             <br />
             <br />
-
-            Built using <b>Next.js</b>,
-            <b> Tailwind CSS</b> and
-            <b> Framer Motion</b> to deliver a premium
-            messaging experience.
           </motion.p>
 
           <motion.button
