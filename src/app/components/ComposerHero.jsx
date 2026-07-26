@@ -10,30 +10,17 @@ import { HiArrowDown } from "react-icons/hi";
 
 export default function ComposerHero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center px-6 overflow-hidden ">
 
       {/* Background Blur */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[750px] h-[750px] rounded-full bg-green-300/20 blur-[180px]" />
-
-      {/* Badge */}
-      <motion.div
-        initial={{ opacity: 0, y: -25 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        className="z-10"
-      >
-        <div className="inline-flex items-center gap-2 rounded-full bg-green-100 px-6 py-3 text-green-700 font-semibold shadow-md">
-          <HiSparkles size={20} />
-          WhatsApp UI Simulation
-        </div>
-      </motion.div>
 
       {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="z-10 mt-10 text-center font-black leading-none text-6xl md:text-8xl xl:text-[110px]"
+        className="mt-30 text-center font-black text-white z-90 leading-none text-6xl md:text-8xl xl:text-[110px]"
       >
         WhatsApp
         <br />
