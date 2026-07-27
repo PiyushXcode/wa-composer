@@ -6,12 +6,15 @@ import PhonePreview from "@/app/components/PhonePreview";
 import ComposerHero from "../components/ComposerHero";
 export default function FormPage() {
   // Form Data
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    message: "",
-    type: "Text",
-  });
+ const [formData, setFormData] = useState({
+  name: "",
+  phone: "",
+  message: "",
+  type: "Text",
+
+  image: null,
+  imageUrl: "",
+});
 
   // Validation Errors
   const [errors, setErrors] = useState({});

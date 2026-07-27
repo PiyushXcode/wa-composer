@@ -49,10 +49,27 @@ const MessageBubble = ({ preview, status }) => {
       >
         {/* Message */}
 
-        <p className="text-gray-800 text-sm leading-6">
-          {preview.message}
-        </p>
+        <>
+          {preview.image && (
+            <img
+              src={preview.image}
+              alt="Preview"
+              className="
+        rounded-xl
+        mb-3
+        max-h-56
+        w-full
+        object-cover
+      "
+            />
+          )}
 
+          {preview.message && (
+            <p className="text-gray-800 text-sm">
+              {preview.message}
+            </p>
+          )}
+        </>
         {/* Time + Tick */}
 
         <div className="flex justify-end items-center gap-1 mt-2">
